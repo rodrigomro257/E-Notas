@@ -1,0 +1,56 @@
+#main_div > button{
+	margin-bottom: 10px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+#div_topo{
+	background-color: #A8EF23;
+}
+
+#div_topo > p{
+	font-family: "Comic Sans MS", Comic Sans, cursive;
+	font-size: 50px;
+	margin-left: 50px;
+}
+
+#div_topo > img{
+	height: 150px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	margin-left: 20px;
+}
+
+.div_topo{
+	display: inline-block;
+}
+
+input{
+	margin-top: 10px;
+}
+
+.nota{
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 30%;
+	display: inline-block;
+}
+
+h4, i{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+
+.div_edit, .div_delete{
+	display: inline-block;
+	margin-bottom: 10px;
+}
+
+h4{
+	font-family: "Comic Sans MS", Comic Sans, cursive;
+}
+
+i{
+	cursor: pointer;
+}

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>Rivets teste</title>
+		<!-- JQuery -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+		<!-- RIVETS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/rivets/0.9.6/rivets.bundled.min.js"></script>
+	</head>
+
+	<body>
+		<div id="rivets">
+			<table>
+				<thead>
+					<tr>
+	    				<th>Nome</th>
+	   					<th>Tipo</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr rv-each-linha="item">
+						<td>{linha.nome}</td>
+						<td>{linha.tipo}</td>
+					</tr>
+				</tbody>
+			</table>
+			<br>
+			<div id="rivets">
+			    <ol>
+			        <li rv-each-linha="item"> { linha.nome } - {linha.tipo}</li>
+			    </ol>
+			</div>
+
+		</div>
+	</body>
+
+</html>
+
+<script>
+	// BASICAMENTE, AO INVÉS DE PASSAR UM ITEM DE CADA VEZ, É PASSADO UM VETOR COM VÁRIOS ÍTENS. 
+	$(document).ready(function(){
+	    window.view = rivets.bind($('#rivets'),{
+	        item:[
+	            {nome:'Os Miseráveis', tipo:'livro'},
+	            {nome:'Stone Age', tipo:'jogo'},
+	            {nome:'La Granja', tipo:'jogo'},
+	            {nome:'O Fantasma da Ópera', tipo:'livro'},
+	            {nome:'Frankenstein', tipo:'livro'},
+	            {nome:'The Castles of Burgundy', tipo:'jogo'},
+	            {nome:'O Hobbit', tipo:'livro'},
+	            {nome:'Noria', tipo:'jogo'},
+	        ]
+   		});
+	});
+</script>
+
+<style>
+	table {
+	  font-family: arial, sans-serif;
+	  border-collapse: collapse;
+	  width: 40%;
+	  margin-top: 20px;
+	  margin-left: 20px;
+	}
+
+	td, th {
+	  border: 1px solid #dddddd;
+	  text-align: left;
+	  padding: 8px;
+	}
+
+	tr:nth-child(even) {
+	  background-color: #dddddd;
+	}
+</style>

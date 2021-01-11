@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta content="text/html;charset=utf-8" http-equiv="Content-Type">
+		<meta content="utf-8" http-equiv="encoding">
+		<title>eNotas</title>
+		<!-- JQuery -->
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> 
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+		<!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<!-- PARA CALENDÁRIO--> 
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+		<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>  
+		<!-- RIVETS -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/rivets/0.9.6/rivets.bundled.min.js"></script>
+		<!-- JS -->
+		<script type="text/javascript" src="js/enotas.js"></script>
+		<!-- CSS -->
+		<link rel='stylesheet' href="css/enotas.css">
+	</head>
+
+	<body>
+
+		<!-- ELEMENTOS JÁ PRESENTES NA TELA. -->
+		<div id="main_div">
+			<div height="250px" id="div_topo">
+				<img src="img/nota_img.jpg" class="div_topo">
+				<p class="div_topo">E-Notas</p>
+			</div>
+			<!-- BOTÃO PARA CRIAR UMA NOVA E-NOTA. -->
+			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_create">Criar nova E-Nota</button>
+		</div>
+		<div id="div_notas"><!-- ONDE SERÃO COLOCADAS AS E-NOTAS VINDAS DO BANCO DE DADOS. --></div>
+
+		<!-- MODAL CREATE. -->
+		<div id="modal_create" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Nova E-Nota</h4>
+					</div>
+					<div class="modal-body">
+						<br><label for="title_form" class="create_nota">Título: </label>
+						<input type="text" id="title_text_create" placeholder="title" class="create_nota" style="width: 200px"/>
+						<br><label for="text_form" class="create_nota">Texto: </label>
+						<input type="text" id="text_text_create" placeholder="text" class="create_nota" style="width: 500px"/>
+						<br><label for="data_form" class="create_nota">Data: </label>
+						<input type="text" id="date_text_create" placeholder="DD/MM/AAAA" class="create_nota" style="width: 100px"/>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn_create" data-dismiss="modal">Criar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!-- MODAL EDIT. -->
+		<div id="modal_edit" class="modal fade" role="dialog">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal">&times;</button>
+						<h4 class="modal-title">Editar E-Nota</h4>
+					</div>
+					<div class="modal-body">
+						<br><label for="title_form" class="edit_send">Título:</label>
+						<input class="edit_send" type="text" id="title_text_edit" placeholder="title" style="width: 200px"/>
+						<br><label for="text_form" class="edit_send">Texto:</label>
+						<input class="edit_send" type="text" id="text_text_edit" placeholder="text" style="width: 500px"/>
+						<br><label for="data_form" class="edit_send">Data:</label>
+						<input class="edit_send" type="text" id="date_text_edit" placeholder="DD/MM/AAAA" style="width: 100px"/>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default btn_edit" id="btn_edit" data-dismiss="modal">Editar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+
+</html>
