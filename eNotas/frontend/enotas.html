@@ -36,45 +36,24 @@
 			<!-- BOTÃO PARA CRIAR UMA NOVA E-NOTA. -->
 			<button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#modal_create">Criar nova E-Nota</button>
 		</div>
-		<div id="div_notas"><!-- ONDE SERÃO COLOCADAS AS E-NOTAS VINDAS DO BANCO DE DADOS. --></div>
 
-
-
-
-		
-
-
-		
-		<div class="enota"  rv-each-enota="enotas">
-
-			<div rv-id="enota.id"> <!--pode apagar-->
-				
-				<div id="cabecalho" rv-teste="enota.id"> <!-- CABEÇALHO: ID E DATA -->
-					<h4 id="id">{enota.id}</h4>
-					<h4 id="date">{enota.data}</h4>
-				</div>
-				
-				<div id="corpo">
-					<h4 id="title">{enota.title}</h4><br>
-					<h4 id="text">{enota.text}</h4><br>
-					<div class="div_edit"> <!-- BOTÃO EDITAR -->
-						<i class="fa fa-pencil-square-o" rv-id="enota.id" type="button" aria-hidden="true" data-toggle="modal" data-target="#modal_edit"> Editar</i>
-					</div>
-					<div class="div_delete"> <!-- BOTÃO EXCLUIR -->
-						<i class="fa fa-trash-o" rv-id="enota.id" aria-hidden="true"> Excluir</i>
-					</div>
-				</div>
-
+		<!-- E-NOTAS QUE APARECEM NA TELA. -->
+		<div class="enota"  rv-each-enota="enotas">				
+			<div id="cabecalho" rv-teste="enota.id"> <!-- CABEÇALHO: ID E DATA -->
+				<h4 id="id">{enota.id}</h4>
+				<h4 id="date">{enota.data}</h4>
 			</div>
-
+			<div id="corpo">
+				<h4 id="title">{enota.title}</h4><br>
+				<h4 id="text">{enota.text}</h4><br>
+				<div class="div_edit"> <!-- BOTÃO EDITAR -->
+					<i class="fa fa-pencil-square-o" rv-id="enota.id" type="button" aria-hidden="true" data-toggle="modal" data-target="#modal_edit"> Editar</i>
+				</div>
+				<div class="div_delete"> <!-- BOTÃO EXCLUIR -->
+					<i class="fa fa-trash-o" rv-id="enota.id" aria-hidden="true"> Excluir</i>
+				</div>
+			</div>
 		</div>
-		
-
-
-
-
-
-
 
 		<!-- MODAL CREATE. -->
 		<div id="modal_create" class="modal fade" role="dialog">
@@ -125,4 +104,3 @@
 	</body>
 
 </html>
-
