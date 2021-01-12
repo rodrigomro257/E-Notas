@@ -29,12 +29,17 @@ input{
 	margin-top: 10px;
 }
 
-.nota{
+.enota{
 	margin-left: 20px;
 	margin-top: 10px;
 	margin-bottom: 10px;
 	width: 30%;
 	display: inline-block;
+	background: #7EFD7C;
+}
+
+.enota #cabecalho{
+	background: #2CD029;
 }
 
 h4, i{
@@ -53,4 +58,20 @@ h4{
 
 i{
 	cursor: pointer;
+}
+
+#cabecalho > h4{
+	display: inline-block;
+}
+
+#date{
+	float: right;
+}
+
+#title{
+	font-size: 25px;
+}
+
+#text{
+	font-size: 20px;
 }
