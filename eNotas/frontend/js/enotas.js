@@ -36,7 +36,7 @@ $(document).ready(function(){
 	});
 
 	// PARA LIMPAR OS CAMPOS DE EDIÇÃO.
-	$("#create_nota").val("");
+	$(".create_nota").val("");
 	$(".edit_send").val("");
 
 	// CONFIGURAÇÃO DO RIVETS.
@@ -82,7 +82,8 @@ $(document).ready(function(){
 			window.view = rivets.bind($('.enota'),{
 		        enotas:data
 	   		});
-/*
+
+			/*
 	   		// COLORIR AS E-NOTAS.
 			$(".enota").each(function(index){
 				var rand = Math.floor((Math.random() * 4) + 1);
@@ -103,7 +104,8 @@ $(document).ready(function(){
 					$(".enota #cabecalho").css("background", "#D0CB29");
 				}
 			});
-*/
+			*/
+
 			// BOTÃO DE DELETAR.
 			$('.div_delete i').click(function(){
 				$.ajax({
