@@ -38,13 +38,13 @@ public class ENotasDao extends AbstractDAO<ENotas>{
     }
 
     // localhost:8080/eNotas/title
-    public ENotas getENotaByTitle(int title){
+    public ENotas getENotaByTitle(String titulo){
         // FUNCIONA!
         CriteriaBuilder builder = currentSession().getCriteriaBuilder();
         CriteriaQuery<ENotas> query = builder.createQuery(ENotas.class);
         Root<ENotas> root = query.from(ENotas.class);
         query.where(
-                builder.equal(root.get("title"), title)
+                builder.equal(root.get("titulo"), titulo)
         );
         return currentSession().createQuery(query).getSingleResult();
     }

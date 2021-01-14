@@ -11,13 +11,13 @@
             <column name="id" type="int" autoIncrement="true">
                 <constraints primaryKey="true" nullable="false"/>
             </column>
-            <column name="title" type="varchar(30)">
+            <column name="titulo" type="varchar(30)">
                 <constraints nullable="false"/>
             </column>
-            <column name="text" type="varchar(100)">
+            <column name="texto" type="varchar(100)">
                 <constraints nullable="false"/>
             </column>
-            <column name="data" type="varchar(10)">
+            <column name="data" type="timestamptz">
                 <constraints nullable="false"/>
             </column>
         </createTable>

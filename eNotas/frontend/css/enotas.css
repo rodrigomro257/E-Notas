@@ -64,14 +64,14 @@ i{
 	display: inline-block;
 }
 
-#date{
+#data{
 	float: right;
 }
 
-#title{
+#titulo{
 	font-size: 25px;
 }
 
-#text{
+#texto{
 	font-size: 20px;
 }

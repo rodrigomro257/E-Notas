@@ -23,6 +23,8 @@
 		<script type="text/javascript" src="js/enotas.js"></script>
 		<!-- CSS -->
 		<link rel='stylesheet' href="css/enotas.css">
+		<!-- PARA FORMATAR A DATA -->
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
 	</head>
 
 	<body>
@@ -41,16 +43,17 @@
 		<div class="enota"  rv-each-enota="enotas">				
 			<div id="cabecalho" rv-teste="enota.id"> <!-- CABEÇALHO: ID E DATA -->
 				<h4 id="id">{enota.id}</h4>
-				<h4 id="date">{enota.data}</h4>
+				<h4 id="data" rv-text="enota.data | date"></h4>
+				<!--<h4 id="data" rv-text="enota.data | date">{enota.data}</h4>-->
 			</div>
 			<div id="corpo">
-				<h4 id="title">{enota.title}</h4><br>
-				<h4 id="text">{enota.text}</h4><br>
+				<h4 id="titulo">{enota.titulo}</h4><br>
+				<h4 id="texto">{enota.texto}</h4><br>
 				<div class="div_edit"> <!-- BOTÃO EDITAR -->
-					<i class="fa fa-pencil-square-o" rv-id="enota.id" type="button" aria-hidden="true" data-toggle="modal" data-target="#modal_edit"> Editar</i>
+					<i class="fa fa-pencil-square-o" rv-edit="enota.id" type="button" aria-hidden="true" data-toggle="modal" data-target="#modal_edit"> Editar</i>
 				</div>
 				<div class="div_delete"> <!-- BOTÃO EXCLUIR -->
-					<i class="fa fa-trash-o" rv-id="enota.id" aria-hidden="true"> Excluir</i>
+					<i class="fa fa-trash-o" rv-delete="enota.id" aria-hidden="true"> Excluir</i>
 				</div>
 			</div>
 		</div>

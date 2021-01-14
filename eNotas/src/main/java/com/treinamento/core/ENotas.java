@@ -1,6 +1,7 @@
 package com.treinamento.core;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "enotas")
@@ -17,20 +18,20 @@ public class ENotas {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "title", length = 30, nullable = false)
-    private String title;
+    @Column(name = "titulo", length = 30, nullable = false)
+    private String titulo;
 
-    @Column(name = "text", length = 100, nullable = false)
-    private String text;
+    @Column(name = "texto", length = 100, nullable = false)
+    private String texto;
 
-    @Column(name = "data", length = 10, nullable = false)
-    private String data; // DD/MM/AAAA
+    @Column(name = "data", nullable = false)
+    private Timestamp data;
 
     public ENotas(){}
-    public ENotas(int id, String title, String text, String data){
+    public ENotas(int id, String titulo, String texto, Timestamp data){
         this.id = id;
-        this.title = title;
-        this.text = text;
+        this.titulo = titulo;
+        this.texto = texto;
         this.data = data;
     }
 
@@ -41,24 +42,24 @@ public class ENotas {
         this.id = id;
     }
 
-    public String getTitle() {
-        return title;
+    public String getTitulo() {
+        return titulo;
     }
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getText() {
-        return text;
-    }
-    public void setText(String text) {
-        this.text = text;
+    public void setTitulo(String titulo) {
+        this.titulo = titulo;
     }
 
-    public String getData() {
+    public String getTexto() {
+        return texto;
+    }
+    public void setTexto(String texto) {
+        this.texto = texto;
+    }
+
+    public Timestamp getData() {
         return data;
     }
-    public void setData(String data){
+    public void setData(Timestamp data){
         this.data = data;
     }
 }
